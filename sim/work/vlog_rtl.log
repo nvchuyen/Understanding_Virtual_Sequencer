@@ -1,0 +1,13 @@
+QuestaSim vlog 10.7c Compiler 2018.08 Aug 17 2018
+Start time: 15:38:58 on Dec 27,2023
+vlog -sv -l vlog_rtl.log -f filelist_rtl.f -incr "+acc=mnprt" "+cover=sbceft" -assertdebug 
+-- Compiling module top
+-- Compiling module adder
+-- Compiling module mul
+-- Compiling interface add_if
+-- Compiling interface mul_if
+
+Top level modules:
+	top
+End time: 15:38:58 on Dec 27,2023, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

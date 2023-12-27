@@ -1,0 +1,167 @@
+# vsim -c -sv_seed 20 top_tb -l vsim.log -dpicpppath /usr/bin/gcc "+UVM_VERBOSITY=UVM_LOW" "+UVM_TESTNAME=test" -assertdebug -coverage "+voptargs=+acc" -do "set WildcardFilter None; add wave -position insertpoint sim:/uvm_pkg/*;
+# add wave -r top_tb/*; run -all; quit;" 
+# Start time: 15:39:00 on Dec 27,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# //  Questa Sim
+# //  Version 10.7c linux Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.mul_if(fast)
+# Loading work.uvm_pkg(fast)
+# Loading work.mul_agent_pkg(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.add_if(fast)
+# Loading work.add_agent_pkg(fast)
+# Loading work.env_pkg(fast)
+# Loading work.seq_lib_pkg(fast)
+# Loading work.test_lib_pkg(fast)
+# Loading work.top_tb_sv_unit(fast)
+# Loading work.top_tb(fast)
+# Loading work.add_if(fast)
+# Loading work.mul_if(fast)
+# Loading work.top(fast)
+# Loading work.adder(fast)
+# Loading work.mul(fast)
+# set WildcardFilter None
+# None
+#  add wave -position insertpoint sim:/uvm_pkg/*
+# 
+# add wave -r top_tb/*
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_WARNING @ 0: reporter [TPRGED] Type name 'vsequencer' already registered with factory. No string-based lookup support for multiple types with the same type name.
+# UVM_WARNING @ 0: reporter [TPRGED] Type name 'vsequencer' already registered with factory. No string-based lookup support for multiple types with the same type name.
+# UVM_WARNING @ 0: reporter [TPRGED] Type name 'add_gen' already registered with factory. No string-based lookup support for multiple types with the same type name.
+# UVM_WARNING @ 0: reporter [TPRGED] Type name 'mul_gen' already registered with factory. No string-based lookup support for multiple types with the same type name.
+# UVM_INFO @ 0: reporter [RNTST] Running test test...
+# -------------------------------------------------------------- 
+# -------------------------------------------------------------- 
+# UVM_INFO ../test/test.svh(52) @ 0: uvm_test_top [other_test] start of Elaboration Phase Executed
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               test                    -     @453 
+#   env                      env                     -     @461 
+#     aa                     add_agent               -     @477 
+#       a_seqr               uvm_sequencer           -     @659 
+#         rsp_export         uvm_analysis_export     -     @667 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @773 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#       d                    add_driver              -     @633 
+#         rsp_port           uvm_analysis_port       -     @650 
+#         seq_item_port      uvm_seq_item_pull_port  -     @641 
+#       m                    add_mon                 -     @625 
+#         send               uvm_analysis_port       -     @796 
+#     ma                     mul_agent               -     @485 
+#       d                    mul_driver              -     @815 
+#         rsp_port           uvm_analysis_port       -     @832 
+#         seq_item_port      uvm_seq_item_pull_port  -     @823 
+#       m                    mul_mon                 -     @807 
+#         send               uvm_analysis_port       -     @973 
+#       m_seqr               uvm_sequencer           -     @841 
+#         rsp_export         uvm_analysis_export     -     @849 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @955 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#     s                      sco                     -     @616 
+#       recva                uvm_analysis_imp_add    -     @988 
+#       recvm                uvm_analysis_imp_mul    -     @997 
+#     vseqr                  vsequencer              -     @493 
+#       rsp_export           uvm_analysis_export     -     @501 
+#       seq_item_export      uvm_seq_item_pull_imp   -     @607 
+#       arbitration_queue    array                   0     -    
+#       lock_queue           array                   0     -    
+#       num_last_reqs        integral                32    'd1  
+#       num_last_rsps        integral                32    'd1  
+# --------------------------------------------------------------
+# 
+# UVM_INFO ../test/test.svh(54) @ 0: uvm_test_top [other_test] End of Elaboration Phase Executed
+# 
+#### Factory Configuration (*)
+# 
+#   No instance or type overrides are registered with this factory
+# 
+# All types registered with the factory: 59 total
+# (types without type names will not be printed)
+# 
+#   Type Name
+#   ---------
+#   add_agent
+#   add_driver
+#   add_gen
+#   add_mon
+#   add_sequence
+#   add_transaction
+#   env
+#   mul_agent
+#   mul_driver
+#   mul_gen
+#   mul_mon
+#   mul_sequence
+#   mul_transaction
+#   sco
+#   test
+#   top_vseq_base
+#   vsequencer
+# (*) Types with no associated type name will be printed as <unknown>
+# 
+####
+# 
+# UVM_ERROR ../sequences/top_vseq_base.svh(24) @ 0: uvm_test_top.env.vseqr@@mgen [uvm_test_top.env.vseqr.mgen] Virtual sequencer pointer cast failed
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/librt.so.1 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libdl.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libm.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libpthread.so.0 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libc.so.6 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/ld-linux.so.2 : module was loaded at an absolute address.
+# ** Warning: (vsim-3116) Problem reading symbols from /lib/i386-linux-gnu/libnss_files.so.2 : module was loaded at an absolute address.
+# ** Fatal: (SIGSEGV) Bad handle or reference.
+#    Time: 0 ns  Iteration: 44  Process: /uvm_pkg::uvm_sequence_base::start/#FORK#294_f67c9c0 File: /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/seq/uvm_sequence_base.svh
+# Fatal error in Task uvm_pkg/uvm_sequence_base::start at /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/seq/uvm_sequence_base.svh line 240
+# 
+# HDL call sequence:
+# Stopped at /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/seq/uvm_sequence_base.svh 240 Task uvm_pkg/uvm_sequence_base::start
+# called from  ../sequences/mul_gen.svh 18 Task test_lib_pkg/mul_gen::body
+# called from  /11tools/MENTOR/questasim_10.7c/questasim/verilog_src/uvm-1.1d/src/seq/uvm_sequence_base.svh 314 Task uvm_pkg/uvm_sequence_base::start
+# 
+#  quit
+# End time: 15:39:04 on Dec 27,2023, Elapsed time: 0:00:04
+# Errors: 2, Warnings: 7
